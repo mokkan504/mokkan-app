@@ -1389,7 +1389,8 @@ button {
   gap: 8px;
 }
 
-.birthdate-selects select {
+.birthdate-selects select,
+.birthdate-selects input {
   min-width: 0;
 }
 

@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v14-birthdate-selects";
+const CACHE_NAME = "mokkan-v15-birth-year-input";
 const APP_SHELL = [
   "./",
   "./index.html",

@@ -45,7 +45,7 @@
               생년월일
               <input type="hidden" name="birthDate">
               <span class="birthdate-selects">
-                <select data-birth-year aria-label="출생 연도" required></select>
+                <input type="number" data-birth-year aria-label="출생 연도" min="1900" inputmode="numeric" placeholder="연도" required>
                 <select data-birth-month aria-label="출생 월" required></select>
                 <select data-birth-day aria-label="출생 일" required></select>
               </span>

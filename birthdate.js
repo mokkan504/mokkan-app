@@ -10,10 +10,7 @@
     const day = container.querySelector("[data-birth-day]");
     const currentYear = new Date().getFullYear();
 
-    year.innerHTML = option("", "연도") + Array.from({ length: currentYear - 1899 }, (_, index) => {
-      const value = currentYear - index;
-      return option(value, `${value}년`);
-    }).join("");
+    year.max = String(currentYear);
     month.innerHTML = option("", "월") + Array.from({ length: 12 }, (_, index) => option(index + 1, `${index + 1}월`)).join("");
 
     function updateDays() {
@@ -25,12 +22,13 @@
 
     function sync() {
       updateDays();
-      hidden.value = year.value && month.value && day.value
+      const validYear = Number(year.value) >= 1900 && Number(year.value) <= currentYear;
+      hidden.value = validYear && month.value && day.value
         ? `${year.value}-${String(month.value).padStart(2, "0")}-${String(day.value).padStart(2, "0")}`
         : "";
     }
 
-    year.addEventListener("change", sync);
+    year.addEventListener("input", sync);
     month.addEventListener("change", sync);
     day.addEventListener("change", sync);
     updateDays();
