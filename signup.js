@@ -2,8 +2,26 @@
   const form = document.getElementById("signupForm");
   const result = document.getElementById("signupResult");
   if (!form) return;
+  const password = form.elements.password;
+  const passwordConfirm = form.elements.passwordConfirm;
+
+  function validatePasswords() {
+    const matches = password.value === passwordConfirm.value;
+    passwordConfirm.setCustomValidity(matches ? "" : "비밀번호가 일치하지 않습니다.");
+    return matches;
+  }
+
+  password.addEventListener("input", validatePasswords);
+  passwordConfirm.addEventListener("input", validatePasswords);
+
   form.addEventListener("submit", async (event) => {
-    event.preventDefault(); result.textContent = "가입 처리 중입니다…";
+    event.preventDefault();
+    if (!validatePasswords()) {
+      result.textContent = "비밀번호와 비밀번호 확인이 일치하지 않습니다.";
+      passwordConfirm.reportValidity();
+      return;
+    }
+    result.textContent = "가입 처리 중입니다…";
     const d = new FormData(form); const email = String(d.get("email")).trim();
     try {
       const { error } = await MokkanBackend.client.auth.signUp({
