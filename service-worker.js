@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v12-admin-columns";
+const CACHE_NAME = "mokkan-v13-csv-export";
 const APP_SHELL = [
   "./",
   "./index.html",
