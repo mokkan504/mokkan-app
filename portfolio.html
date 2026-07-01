@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio | MOKKAN 목간</title>
+    <meta name="description" content="목간에서 디자인하고 제작하는 가구 작업을 기록하는 포트폴리오입니다.">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="MOKKAN home">
+        <img src="./assets/mokkan-logo.png" alt="MOKKAN 목간 로고">
+        <span class="brand-word">MOKKAN <span class="brand-hanja">木間</span></span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="./about.html">소개</a>
+        <a href="./products.html">제품</a>
+        <a href="./furniture-finder.html">맞춤 가이드</a>
+        <a href="./journal.html">가구 이야기</a>
+        <a href="./portfolio.html">작업 사례</a>
+        <a href="./contact.html">문의</a>
+        <a href="./signup.html">회원가입</a>
+        <a href="./login.html">로그인</a>
+        <a href="./mypage.html">마이페이지</a>
+        <a href="./cart.html">장바구니 <span id="cartCount" class="cart-count">0</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section portfolio-hero">
+        <div class="section-head">
+          <p class="eyebrow">Portfolio</p>
+          <h1 class="page-title">만들어온 가구와 앞으로의 형태</h1>
+          <p>목간의 포트폴리오는 완성된 제품만이 아니라 구조를 고민하고 비례를 다듬는 과정까지 함께 기록합니다.</p>
+        </div>
+      </section>
+
+      <section class="section portfolio-section">
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+        <p class="empty-state" id="emptyPortfolio" hidden>등록된 포트폴리오가 없습니다.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p>MOKKAN · 목간</p>
+        <p>원목의 결, 시간의 깊이, 생활의 자리를 생각합니다.</p>
+      </div>
+      <a class="operator-link" href="./admin-login.html" aria-label="관리자 로그인">Admin</a>
+    </footer>
+    <script src="./portfolio.js"></script>
+    <script src="./cart.js"></script>
+    <script src="./auth.js"></script>
+  </body>
+</html>

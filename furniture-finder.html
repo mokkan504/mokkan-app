@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>가구 방향 찾기 | MOKKAN 목간</title>
+    <meta name="description" content="원하는 가구 조합과 생활 조건을 바탕으로 원목 수종, 가구 크기, 마감 방법, 디자인 방향을 안내합니다.">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="MOKKAN home">
+        <img src="./assets/mokkan-logo.png" alt="MOKKAN 목간 로고">
+        <span class="brand-word">MOKKAN <span class="brand-hanja">木間</span></span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="./about.html">소개</a>
+        <a href="./products.html">제품</a>
+        <a href="./furniture-finder.html" aria-current="page">맞춤 가이드</a>
+        <a href="./journal.html">가구 이야기</a>
+        <a href="./portfolio.html">작업 사례</a>
+        <a href="./contact.html">문의</a>
+        <a href="./cart.html">장바구니 <span id="cartCount" class="cart-count">0</span></a>
+      </nav>
+    </header>
+
+    <main class="finder-page">
+      <section class="finder-hero">
+        <div class="finder-hero-copy">
+          <p class="eyebrow">Material & Design Guide</p>
+          <h1>내 공간에 맞는 가구 방향을 찾아보세요.</h1>
+          <p>원하는 가구를 여러 개 선택하고, 사용 습관과 공간 조건을 이어서 답하면 상담 전 참고할 방향을 정리해드립니다.</p>
+        </div>
+        <figure class="finder-hero-media">
+          <img src="./assets/mokkan-custom-order-consultation.png" alt="원목 샘플과 도면을 함께 살펴보는 주문제작 상담 장면">
+        </figure>
+      </section>
+
+      <section class="finder-shell" aria-labelledby="finderTitle">
+        <div class="finder-panel">
+          <div class="finder-progress" aria-hidden="true">
+            <span id="finderProgressBar"></span>
+          </div>
+          <div class="finder-step-meta">
+            <p class="eyebrow" id="finderStep">Question 1</p>
+            <span id="finderCount">1 / 10</span>
+          </div>
+          <h2 id="finderTitle">가구를 둘 공간은 어떤 성격에 가깝나요?</h2>
+          <div class="finder-options" id="finderOptions"></div>
+        </div>
+
+        <aside class="finder-result" id="finderResult" aria-live="polite">
+          <span class="finder-result-label">Guide</span>
+          <h2>응답을 따라 가구 방향이 정리됩니다.</h2>
+          <p>결과에서는 제품 추천 대신 가구 구성, 원목 수종, 크기 감각, 마감 방법, 디자인 방향을 안내합니다.</p>
+          <div class="finder-result-actions">
+            <a class="button primary" href="./custom-quote.html">상담 문의</a>
+            <a class="button ghost dark" href="./journal.html">가구 이야기 보기</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p>MOKKAN · 목간</p>
+        <p>나무의 결, 생활의 리듬, 오래 쓰는 가구를 생각합니다.</p>
+      </div>
+      <a class="operator-link" href="./admin-login.html" aria-label="관리자 로그인">Admin</a>
+    </footer>
+    <script src="./cart.js"></script>
+    <script src="./furniture-finder.js"></script>
+    <script src="./auth.js"></script>
+  </body>
+</html>

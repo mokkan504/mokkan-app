@@ -1,0 +1,171 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | MOKKAN 목간</title>
+    <meta name="description" content="목간 제작 문의 페이지입니다.">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="MOKKAN home">
+        <img src="./assets/mokkan-logo.png" alt="MOKKAN 목간 로고">
+        <span class="brand-word">MOKKAN <span class="brand-hanja">木間</span></span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="./about.html">소개</a>
+        <a href="./products.html">제품</a>
+        <a href="./furniture-finder.html">맞춤 가이드</a>
+        <a href="./journal.html">가구 이야기</a>
+        <a href="./portfolio.html">작업 사례</a>
+        <a href="./contact.html">문의</a>
+        <a href="./signup.html">회원가입</a>
+        <a href="./login.html">로그인</a>
+        <a href="./mypage.html">마이페이지</a>
+        <a href="./cart.html">장바구니 <span id="cartCount" class="cart-count">0</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section contact-section page-section">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h1 class="page-title">제작 문의</h1>
+          <p>문의 내용을 남기면 목간의 제작 기록으로 접수됩니다. 가구의 크기가 아직 정해지지 않았더라도 괜찮습니다. 공간, 용도, 수종, 마감, 납기 조건을 차례로 확인하며 필요한 치수는 상담 과정에서 함께 잡아드립니다.</p>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <label>
+            이름
+            <input type="text" name="name" placeholder="홍길동" required>
+          </label>
+          <label>
+            이메일
+            <input type="email" name="email" placeholder="mokkan@example.com" required>
+          </label>
+          <label>
+            연락처
+            <input type="tel" name="phone" placeholder="010-0000-0000">
+          </label>
+          <label>
+            제품군
+            <select name="product" required>
+              <option>가구 제작 문의</option>
+              <option>식탁</option>
+              <option>책상</option>
+              <option>사이드 테이블</option>
+              <option>수납장/선반</option>
+              <option>의자</option>
+              <option>기타 가구 제작 문의</option>
+            </select>
+          </label>
+          <label>
+            설치 공간
+            <select name="space" required>
+              <option>미정</option>
+              <option>거실</option>
+              <option>주방/다이닝룸</option>
+              <option>서재/작업실</option>
+              <option>침실</option>
+              <option>현관/복도</option>
+              <option>상업 공간</option>
+              <option>기타 공간</option>
+            </select>
+          </label>
+          <label>
+            예산 범위
+            <select name="budget">
+              <option>미정</option>
+              <option>50만원 이하</option>
+              <option>50만~100만원</option>
+              <option>100만~200만원</option>
+              <option>200만~300만원</option>
+              <option>300만원 이상</option>
+            </select>
+          </label>
+          <div class="form-grid-three">
+            <label>
+              가로
+              <input type="number" name="width" min="0" step="1" placeholder="예: 1800">
+              <span class="field-hint">mm 단위</span>
+            </label>
+            <label>
+              깊이
+              <input type="number" name="depth" min="0" step="1" placeholder="예: 850">
+              <span class="field-hint">mm 단위</span>
+            </label>
+            <label>
+              높이
+              <input type="number" name="height" min="0" step="1" placeholder="예: 730">
+              <span class="field-hint">mm 단위</span>
+            </label>
+          </div>
+          <p class="field-hint form-wide-hint">크기가 아직 정해지지 않았다면 비워두셔도 됩니다. 필요한 치수는 상담 과정에서 함께 잡아드립니다.</p>
+          <div class="form-grid-two">
+            <label>
+              선호 수종
+              <select name="wood">
+                <option>미정</option>
+                <option>월넛</option>
+                <option>오크</option>
+                <option>애쉬</option>
+                <option>체리</option>
+                <option>메이플</option>
+                <option>상담 후 결정</option>
+              </select>
+            </label>
+            <label>
+              선호 색상
+              <select name="color">
+                <option>미정</option>
+                <option>짙은 브라운</option>
+                <option>중간 브라운</option>
+                <option>밝은 내추럴</option>
+                <option>붉은 브라운</option>
+                <option>공간에 맞춰 제안</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            마감 방법
+            <select name="finish">
+              <option>미정</option>
+              <option>오일 마감</option>
+              <option>우레탄 마감</option>
+              <option>무광 마감</option>
+              <option>반광 마감</option>
+              <option>상담 후 결정</option>
+            </select>
+          </label>
+          <label>
+            희망 납기
+            <input type="date" name="timeline">
+            <span class="field-hint">제작 일정은 희망 납기일과 다를 수 있으며, 최소 일주일 이상의 시간이 필요할 수 있습니다. 정성 들여 가능한 빠르게 원하시는 제품을 제작해 전달해드리겠습니다.</span>
+          </label>
+          <label>
+            원하는 가구의 예시 이미지
+            <input type="file" name="referenceImage" accept="image/*">
+            <span class="field-hint">비슷한 구조, 분위기, 비례를 참고할 이미지가 있다면 첨부해주세요.</span>
+          </label>
+          <label>
+            추가 요청사항
+            <textarea name="message" rows="4" placeholder="사용 방식이나 꼭 필요한 기능이 있다면 적어주세요."></textarea>
+          </label>
+          <button type="submit">문의 접수하기</button>
+          <p class="form-note" id="contactResult" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p>MOKKAN · 목간</p>
+        <p>원목의 결, 시간의 깊이, 생활의 자리를 생각합니다.</p>
+      </div>
+      <a class="operator-link" href="./admin-login.html" aria-label="관리자 로그인">Admin</a>
+    </footer>
+    <script src="./app.js"></script>
+    <script src="./cart.js"></script>
+    <script src="./auth.js"></script>
+  </body>
+</html>

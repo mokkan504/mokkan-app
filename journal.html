@@ -1,0 +1,181 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>가구 이야기 | MOKKAN 목간</title>
+    <meta name="description" content="목간의 원목 가구 블로그와 세계 가구 디자인 글입니다.">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="MOKKAN home">
+        <img src="./assets/mokkan-logo.png" alt="MOKKAN 목간 로고">
+        <span class="brand-word">MOKKAN <span class="brand-hanja">木間</span></span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="./about.html">소개</a>
+        <a href="./products.html">제품</a>
+        <a href="./furniture-finder.html">맞춤 가이드</a>
+        <a href="./journal.html">가구 이야기</a>
+        <a href="./portfolio.html">작업 사례</a>
+        <a href="./contact.html">문의</a>
+        <a href="./signup.html">회원가입</a>
+        <a href="./login.html">로그인</a>
+        <a href="./mypage.html">마이페이지</a>
+        <a href="./cart.html">장바구니 <span id="cartCount" class="cart-count">0</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section journal-section page-section">
+        <div class="section-head">
+          <p class="eyebrow">가구 이야기</p>
+          <h1 class="page-title light-title">나무와 가구</h1>
+          <p>나무와 가구에 가까워질 수 있도록 수종, 마감, 구조, 디자인에 관한 폭넓은 지식과 정보를 전합니다.</p>
+        </div>
+        <div class="journal-tabs" role="tablist" aria-label="가구 이야기 분류">
+          <button type="button" role="tab" aria-selected="true" aria-controls="journalPosts" data-journal-filter="all">전체</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="journalPosts" data-journal-filter="wood-knowledge" tabindex="-1">목공 지식</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="journalPosts" data-journal-filter="daily-trends" tabindex="-1">일일 트렌드</button>
+        </div>
+        <p class="journal-filter-status" aria-live="polite"><span id="journalVisibleCount">16</span>개의 글</p>
+        <div class="journal-grid" id="journalPosts" role="tabpanel" aria-label="전체 글">
+          <a class="journal-card has-media" href="./blog/wood-screw-pilot-hole.html" data-category="wood-knowledge">
+            <img src="./assets/journal-wood-screw-pilot-hole.png" alt="오크 가구 부재를 클램프로 고정하고 목재 나사용 예비구멍을 뚫는 작업">
+            <div class="journal-card-body">
+              <span>Fastening</span>
+              <h3>목재 나사 체결의 기준</h3>
+              <p>예비구멍과 여유구멍, 나사의 길이와 위치, 적정한 조임으로 오래가는 체결을 살펴봅니다.</p>
+            </div>
+          </a>
+          <a class="journal-card has-media" href="./blog/daily-trends-2026-07-01.html" data-category="daily-trends">
+            <img src="./assets/daily-trends-2026-07-01.png" alt="원목 의자와 표면재 샘플, 설계 화면, 접이식 흡음 패널이 있는 작업실">
+            <div class="journal-card-body">
+              <span>Daily Trends · 2026.07.01</span>
+              <h3>2026.07.01 가구·인테리어·목공 일일 트렌드</h3>
+              <p>AI 견적, 바이오 기반 표면재, 목구조 재사용, 흡음 가구와 디자인 아카이브를 읽습니다.</p>
+            </div>
+          </a>
+          <a class="journal-card has-media" href="./blog/daily-trends-2026-06-30.html" data-category="daily-trends">
+            <img src="./assets/daily-trends-2026-06-30.png" alt="현대 목공 작업실의 원목 의자와 소재 샘플, CNC 장비">
+            <div class="journal-card-body">
+              <span>Daily Trends · 2026.06.30</span>
+              <h3>2026.06.30 가구·인테리어·목공 일일 트렌드</h3>
+              <p>제조 기술 전시, 애쉬 의자 공예, 소형 옴니채널 매장, 순환형 오피스와 유럽 공급망을 읽습니다.</p>
+            </div>
+          </a>
+          <a class="journal-card has-media" href="./blog/daily-trends-2026-06-29.html" data-category="daily-trends">
+            <img src="./assets/daily-trends-2026-06-29.png" alt="맞춤 월넛 붙박이장과 아트 퍼니처가 있는 거실">
+            <div class="journal-card-body"><span>Daily Trends · 2026.06.29</span>
+            <h3>2026.06.29 가구·인테리어·목공 일일 트렌드</h3>
+            <p>맞춤 제작 주거, 조명 소품, 아트 퍼니처, 순환 소재와 신중해진 소비를 살펴봅니다.</p></div>
+          </a>
+          <a class="journal-card has-media" href="./blog/daily-trends-2026-06-25.html" data-category="daily-trends">
+            <img src="./assets/daily-trends-2026-06-25.png" alt="정원과 이어진 공간의 오크 모듈 수납과 놀이형 가구">
+            <div class="journal-card-body"><span>Daily Trends · 2026.06.25</span>
+            <h3>2026.06.25 가구·인테리어·목공 일일 트렌드</h3>
+            <p>자연스러운 목재, 실내외 생활, 금속 모듈, 장인 협업과 놀이형 가구를 읽습니다.</p></div>
+          </a>
+          <a class="journal-card has-media" href="./blog/daily-trends-2026-06-24.html" data-category="daily-trends">
+            <img src="./assets/daily-trends-2026-06-24.png" alt="빈티지 수납장과 관형 금속 의자, 모듈 선반이 있는 스튜디오">
+            <div class="journal-card-body"><span>Daily Trends · 2026.06.24</span>
+            <h3>2026.06.24 가구·인테리어·목공 일일 트렌드</h3>
+            <p>빈티지 복원, 장인 플랫폼, 아카이브 의자, 모듈 금속과 밀라노의 형태·색을 정리합니다.</p></div>
+          </a>
+          <a class="journal-card has-media" href="./blog/dresser-tip-over-safety.html" data-category="wood-knowledge">
+            <img src="./assets/journal-dresser-tip-over-safety.png" alt="벽과 서랍장 상부를 금속 전도 방지 장치로 단단히 연결한 원목 서랍장">
+            <div class="journal-card-body">
+              <span>Furniture Safety</span>
+              <h3>서랍장 전도를 막는 법</h3>
+              <p>서랍이 열릴 때 달라지는 무게중심과 벽 고정, 안전한 수납과 점검 기준을 살펴봅니다.</p>
+            </div>
+          </a>
+          <a class="journal-card has-media" href="./blog/wood-sanding-grit-guide.html" data-category="wood-knowledge">
+            <img src="./assets/journal-wood-sanding.png" alt="원목 패널의 나뭇결을 따라 샌딩 블록으로 표면을 다듬는 작업">
+            <div class="journal-card-body">
+              <span>Craft</span>
+              <h3>목재 샌딩의 기준</h3>
+              <p>사포의 입도와 순서, 결 방향, 샌딩 블록의 역할을 통해 좋은 마감의 바탕을 살펴봅니다.</p>
+            </div>
+          </a>
+          <a class="journal-card has-media" href="./blog/hanok-gongpo-structure.html" data-category="wood-knowledge">
+            <img src="./assets/journal-hanok-gongpo.png" alt="한옥 처마 아래 기둥과 보 사이에 놓인 공포 목구조">
+            <div class="journal-card-body">
+              <span>Hanok Structure</span>
+              <h3>한옥 공포의 구조</h3>
+              <p>처마를 받치는 공포의 역할을 하중, 반복 부재, 보이는 구조의 관점에서 살펴봅니다.</p>
+            </div>
+          </a>
+          <a class="journal-card has-media" href="./blog/chair-desk-ergonomics.html" data-category="wood-knowledge">
+            <img src="./assets/journal-chair-desk-ergonomics-photo.jpg" alt="책상과 의자 높이를 맞춰 편안한 자세로 앉은 작업 공간">
+            <div class="journal-card-body">
+              <span>Ergonomics</span>
+              <h3>의자와 책상 높이</h3>
+              <p>좌면 높이, 상판 높이, 팔꿈치와 발의 위치를 기준으로 오래 앉아도 편한 가구를 살펴봅니다.</p>
+            </div>
+          </a>
+          <a class="journal-card has-media" href="./blog/mortise-tenon-joinery.html" data-category="wood-knowledge">
+            <img src="./assets/journal-mortise-tenon.png" alt="장부와 장부구멍이 맞물리는 원목 짜맞춤 구조">
+            <div class="journal-card-body">
+              <span>Joinery</span>
+              <h3>짜맞춤의 기본</h3>
+              <p>장부와 장부구멍이 원목 가구의 흔들림을 줄이고 구조를 지탱하는 방식을 살펴봅니다.</p>
+            </div>
+          </a>
+          <a class="journal-card has-media" href="./blog/wood-species.html" data-category="wood-knowledge">
+            <img src="./assets/journal-wood-species.png" alt="월넛과 오크, 애쉬 원목 샘플">
+            <div class="journal-card-body">
+              <span>Guide</span>
+              <h3>나에게 맞는 원목 찾기</h3>
+              <p>월넛, 오크, 애쉬의 차이를 색감, 무늬, 사용성 기준으로 살펴봅니다.</p>
+            </div>
+          </a>
+          <a class="journal-card has-media" href="./blog/oil-vs-polyurethane.html" data-category="wood-knowledge">
+            <img src="./assets/journal-finish.png" alt="원목 마감 작업 도구">
+            <div class="journal-card-body">
+              <span>Finish</span>
+              <h3>오일 마감과 우레탄 마감</h3>
+              <p>촉감, 보호력, 관리 방식에 따라 어떤 마감이 잘 맞는지 설명합니다.</p>
+            </div>
+          </a>
+          <a class="journal-card has-media" href="./blog/dining-table-guide.html" data-category="wood-knowledge">
+            <img src="./assets/journal-dining-table-guide.png" alt="의자와 동선을 함께 볼 수 있는 원목 식탁 공간">
+            <div class="journal-card-body">
+              <span>Dining Table</span>
+              <h3>집에 맞는 식탁 고르기</h3>
+              <p>크기, 동선, 상판 구조, 마감, 수종을 기준으로 식탁을 살펴봅니다.</p>
+            </div>
+          </a>
+          <a class="journal-card has-media" href="./blog/aalto-stool-60.html" data-category="wood-knowledge">
+            <img src="./assets/journal-aalto-stool-60.png" alt="자작나무 굽힘목 구조의 세 다리 스툴">
+            <div class="journal-card-body">
+              <span>Design</span>
+              <h3>Alvar Aalto Stool 60</h3>
+              <p>작은 스툴이 오래 남은 이유를 목재 기술과 생활성으로 읽습니다.</p>
+            </div>
+          </a>
+          <a class="journal-card has-media" href="./blog/eames-lounge-chair.html" data-category="wood-knowledge">
+            <img src="./assets/journal-eames-lounge-chair.png" alt="몰드 합판과 검은 가죽 쿠션의 라운지 체어와 오토만">
+            <div class="journal-card-body">
+              <span>Design</span>
+              <h3>Eames Lounge Chair</h3>
+              <p>몰드 합판, 가죽 쿠션, 안락함의 구조를 중심으로 살펴봅니다.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p>MOKKAN · 목간</p>
+        <p>원목의 결, 시간의 깊이, 생활의 자리를 생각합니다.</p>
+      </div>
+      <a class="operator-link" href="./admin-login.html" aria-label="관리자 로그인">Admin</a>
+    </footer>
+    <script src="./cart.js"></script>
+    <script src="./auth.js"></script>
+    <script src="./journal.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MOKKAN 목간 | 장바구니</title>
+    <meta name="description" content="목간 제품 장바구니 페이지입니다.">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body class="signup-body">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="MOKKAN home">
+        <img src="./assets/mokkan-logo.png" alt="MOKKAN 목간 로고">
+        <span class="brand-word">MOKKAN <span class="brand-hanja">木間</span></span>
+      </a>
+      <nav class="nav" aria-label="장바구니 메뉴">
+        <a href="./products.html">제품</a>
+        <a href="./login.html">로그인</a>
+        <a href="./signup.html">회원가입</a>
+        <a href="./mypage.html">마이페이지</a>
+      </nav>
+    </header>
+
+    <main class="signup-shell">
+      <section class="signup-intro">
+        <p class="eyebrow">장바구니</p>
+        <h1>장바구니</h1>
+        <p>관심 있는 대표 제품을 담아두고, 필요할 때 제작 문의로 이어갈 수 있습니다.</p>
+      </section>
+
+      <section class="cart-layout">
+        <div class="table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>제품</th>
+                <th>구분</th>
+                <th>수량</th>
+                <th>관리</th>
+              </tr>
+            </thead>
+            <tbody id="cartRows"></tbody>
+          </table>
+        </div>
+        <p class="empty-state" id="emptyCart" hidden>장바구니가 비어 있습니다.</p>
+        <div class="cart-actions">
+          <a class="button ghost dark" href="./products.html">제품 더 보기</a>
+          <a class="button primary" href="./contact.html">제작 문의하기</a>
+          <button type="button" class="secondary-button" id="clearCart">장바구니 비우기</button>
+        </div>
+      </section>
+    </main>
+    <script src="./cart.js"></script>
+    <script src="./auth.js"></script>
+  </body>
+</html>

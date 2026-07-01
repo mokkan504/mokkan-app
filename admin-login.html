@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MOKKAN 목간 | 관리자 로그인</title>
+    <meta name="description" content="목간 관리자 로그인 페이지입니다.">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body class="signup-body">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="MOKKAN home">
+        <img src="./assets/mokkan-logo.png" alt="MOKKAN 목간 로고">
+        <span>MOKKAN Admin</span>
+      </a>
+      <nav class="nav" aria-label="관리자 로그인 메뉴">
+        <a href="./index.html">홈페이지</a>
+        <a href="./login.html">회원 로그인</a>
+      </nav>
+    </header>
+
+    <main class="signup-shell">
+      <section class="signup-intro">
+        <p class="eyebrow">Admin Only</p>
+        <h1>관리자 로그인</h1>
+        <p>관리자 페이지는 일반 고객에게 공개되지 않습니다. 임시 관리자 계정으로 로그인해야 대시보드에 접근할 수 있습니다.</p>
+      </section>
+
+      <section class="signup-layout">
+        <form class="signup-form" id="adminLoginForm">
+          <label>
+            관리자 아이디
+            <input type="text" name="adminId" placeholder="admin" required>
+          </label>
+          <label>
+            관리자 비밀번호
+            <input type="password" name="adminPassword" placeholder="mokkan2026" required>
+          </label>
+          <button type="submit">관리자 로그인</button>
+          <p class="form-note" id="adminLoginResult" role="status"></p>
+        </form>
+
+        <aside class="signup-aside">
+          <h2>임시 계정</h2>
+          <p>아이디: <strong>admin</strong></p>
+          <p>비밀번호: <strong>mokkan2026</strong></p>
+          <p>실제 배포 시에는 이 방식 대신 서버 기반 인증과 권한 관리를 적용해야 합니다.</p>
+        </aside>
+      </section>
+    </main>
+    <script src="./admin-login.js"></script>
+  </body>
+</html>

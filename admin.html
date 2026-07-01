@@ -1,0 +1,365 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MOKKAN 목간 | 관리자 대시보드</title>
+    <meta name="description" content="목간 홈페이지 관리자용 문의, 고객 통계, 제작 일정, 수익과 지출 관리 페이지입니다.">
+    <script>
+      if (sessionStorage.getItem("mokkanAdminAuth") !== "true") {
+        location.replace("./admin-login.html");
+      }
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body class="admin-body">
+    <header class="site-header admin-header">
+      <a class="brand" href="./index.html" aria-label="MOKKAN home">
+        <img src="./assets/mokkan-logo.png" alt="MOKKAN 목간 로고">
+        <span>MOKKAN Admin</span>
+      </a>
+      <nav class="nav" aria-label="관리자 메뉴">
+        <a href="./index.html">홈페이지</a>
+        <a href="#overview">통계</a>
+        <a href="#inquiries">문의</a>
+        <a href="#customers">고객</a>
+        <a href="#members">회원</a>
+        <a href="#production">제작 일정</a>
+        <a href="#finance">수익/지출</a>
+        <a href="#portfolioAdmin">포트폴리오</a>
+        <button type="button" class="nav-button" id="adminLogout">로그아웃</button>
+      </nav>
+    </header>
+
+    <main class="admin-shell">
+      <section class="admin-hero">
+        <div>
+          <p class="eyebrow">Dashboard</p>
+          <h1>목간 운영 현황</h1>
+          <p>문의 접수, 제작 일정, 납기, 고객 유형, 수익과 지출 흐름을 한눈에 확인하는 관리자용 페이지입니다.</p>
+        </div>
+        <div class="admin-date">
+          <span>기준일</span>
+          <strong id="dashboardDate">-</strong>
+        </div>
+      </section>
+
+      <section id="overview" class="admin-section">
+        <div class="admin-section-head">
+          <h2>주요 통계</h2>
+          <p>홈페이지 문의 양식으로 접수된 실제 데이터를 기준으로 계산합니다. 이 브라우저에 저장된 문의 내역을 읽어 통계와 표를 갱신합니다.</p>
+          <div class="admin-actions">
+            <button type="button" id="exportCsv">CSV 내보내기</button>
+            <button type="button" class="secondary-button" id="clearClosed">답변 완료 문의 숨기기</button>
+          </div>
+        </div>
+        <div class="metric-grid">
+          <article class="metric-card">
+            <span>이번 달 문의</span>
+            <strong id="metricMonthly">0</strong>
+            <p>현재 월 접수 기준</p>
+          </article>
+          <article class="metric-card">
+            <span>진행 중 문의</span>
+            <strong id="metricActive">0</strong>
+            <p>추가 질문, 견적 검토, 상담 진행</p>
+          </article>
+          <article class="metric-card">
+            <span>상담 전환율</span>
+            <strong id="metricConversion">0%</strong>
+            <p>문의 후 상세 상담 진행</p>
+          </article>
+          <article class="metric-card">
+            <span>주요 예산대</span>
+            <strong id="metricBudget">-</strong>
+            <p>가장 많이 선택된 예산 범위</p>
+          </article>
+          <article class="metric-card">
+            <span>가입 회원</span>
+            <strong id="metricMembers">0</strong>
+            <p>개인정보 포함 회원가입 기준</p>
+          </article>
+          <article class="metric-card">
+            <span>이번 달 수익</span>
+            <strong id="metricRevenue">0</strong>
+            <p>입금/매출 기록 기준</p>
+          </article>
+          <article class="metric-card">
+            <span>이번 달 지출</span>
+            <strong id="metricExpense">0</strong>
+            <p>재료, 공구, 운영비 기록</p>
+          </article>
+          <article class="metric-card">
+            <span>예상 순익</span>
+            <strong id="metricProfit">0</strong>
+            <p>수익에서 지출을 제외</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="members" class="admin-section">
+        <div class="admin-section-head">
+          <h2>회원 정보</h2>
+          <p>회원가입 페이지에서 저장된 개인정보입니다. 실제 배포 시에는 접근 권한, 암호화, 개인정보처리방침, 삭제 요청 절차가 반드시 필요합니다.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>가입일</th>
+                <th>회원</th>
+                <th>연락처</th>
+                <th>주소</th>
+                <th>관심 제품</th>
+                <th>마케팅 동의</th>
+              </tr>
+            </thead>
+            <tbody id="memberRows"></tbody>
+          </table>
+        </div>
+        <p class="empty-state" id="emptyMembers" hidden>아직 가입한 회원이 없습니다. 회원가입 페이지에서 가입하면 이곳에 표시됩니다.</p>
+      </section>
+
+      <section class="admin-grid-two">
+        <article class="admin-panel">
+          <div class="panel-head">
+            <h2>제작 문의 흐름</h2>
+            <span>최근 30일</span>
+          </div>
+          <div class="bar-list" id="productBars"></div>
+        </article>
+
+        <article id="customers" class="admin-panel">
+          <div class="panel-head">
+            <h2>고객 유형</h2>
+            <span>문의 기준</span>
+          </div>
+          <div class="customer-types" id="customerTypes"></div>
+        </article>
+      </section>
+
+      <section id="inquiries" class="admin-section">
+        <div class="admin-section-head">
+          <h2>최근 문의 내용</h2>
+          <p>고객 요청, 관심 제품, 예산, 희망 납기, 상담 상태를 정리합니다.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>접수일</th>
+                <th>고객</th>
+                <th>제품군</th>
+                <th>요청 내용</th>
+                <th>예산</th>
+                <th>상태</th>
+              </tr>
+            </thead>
+            <tbody id="inquiryRows"></tbody>
+          </table>
+        </div>
+        <p class="empty-state" id="emptyInquiries" hidden>아직 접수된 문의가 없습니다. 홈페이지의 제작 문의 양식에서 문의를 제출하면 이곳에 표시됩니다.</p>
+      </section>
+
+      <section class="admin-grid-two">
+        <article class="admin-panel">
+          <div class="panel-head">
+            <h2>응대 우선순위</h2>
+            <span>오늘 처리</span>
+          </div>
+          <ul class="task-list" id="priorityTasks"></ul>
+        </article>
+        <article class="admin-panel">
+          <div class="panel-head">
+            <h2>콘텐츠 반응</h2>
+            <span>블로그</span>
+          </div>
+          <ul class="task-list" id="contentReaction"></ul>
+        </article>
+      </section>
+
+      <section id="production" class="admin-section">
+        <div class="admin-section-head">
+          <h2>제작 및 납기 일정</h2>
+          <p>주문별 제작 단계, 시작일, 납기일을 기록하고 진행 상태를 관리합니다.</p>
+        </div>
+        <form class="signup-form admin-work-form" id="productionForm">
+          <div class="form-grid-two">
+            <label>
+              작업명
+              <input type="text" name="title" placeholder="예: 결의 자리 1600 제작" required>
+            </label>
+            <label>
+              고객명
+              <input type="text" name="client" placeholder="예: 홍길동">
+            </label>
+          </div>
+          <div class="form-grid-two">
+            <label>
+              시작일
+              <input type="date" name="startDate" required>
+            </label>
+            <label>
+              납기일
+              <input type="date" name="dueDate" required>
+            </label>
+          </div>
+          <div class="form-grid-two">
+            <label>
+              제작 단계
+              <select name="status">
+                <option>상담/설계</option>
+                <option>목재 준비</option>
+                <option>가공</option>
+                <option>조립</option>
+                <option>마감</option>
+                <option>납품 완료</option>
+              </select>
+            </label>
+            <label>
+              메모
+              <input type="text" name="memo" placeholder="목재, 마감, 운송 메모">
+            </label>
+          </div>
+          <button type="submit">일정 등록</button>
+          <p class="form-note" id="productionResult" role="status"></p>
+        </form>
+        <div class="table-wrap admin-subtable">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>작업</th>
+                <th>기간</th>
+                <th>납기</th>
+                <th>상태</th>
+                <th>메모</th>
+                <th>관리</th>
+              </tr>
+            </thead>
+            <tbody id="productionRows"></tbody>
+          </table>
+        </div>
+        <p class="empty-state" id="emptyProduction" hidden>등록된 제작 일정이 없습니다.</p>
+      </section>
+
+      <section id="finance" class="admin-section">
+        <div class="admin-section-head">
+          <h2>수익 및 지출 관리</h2>
+          <p>가구 제작과 운영에 필요한 매출, 재료비, 공구비, 운영비를 기록합니다.</p>
+        </div>
+        <form class="signup-form admin-work-form" id="financeForm">
+          <div class="form-grid-two">
+            <label>
+              날짜
+              <input type="date" name="date" required>
+            </label>
+            <label>
+              구분
+              <select name="type">
+                <option value="revenue">수익</option>
+                <option value="expense">지출</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-grid-two">
+            <label>
+              항목
+              <input type="text" name="title" placeholder="예: 계약금 입금, 월넛 판재 구입" required>
+            </label>
+            <label>
+              금액
+              <input type="number" name="amount" min="0" step="1000" placeholder="0" required>
+            </label>
+          </div>
+          <label>
+            메모
+            <input type="text" name="memo" placeholder="거래처, 주문명, 영수증 여부">
+          </label>
+          <button type="submit">내역 등록</button>
+          <p class="form-note" id="financeResult" role="status"></p>
+        </form>
+        <div class="table-wrap admin-subtable">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>날짜</th>
+                <th>구분</th>
+                <th>항목</th>
+                <th>금액</th>
+                <th>메모</th>
+                <th>관리</th>
+              </tr>
+            </thead>
+            <tbody id="financeRows"></tbody>
+          </table>
+        </div>
+        <p class="empty-state" id="emptyFinance" hidden>등록된 수익/지출 내역이 없습니다.</p>
+      </section>
+
+      <section id="portfolioAdmin" class="admin-section">
+        <div class="admin-section-head">
+          <h2>포트폴리오 관리</h2>
+          <p>공개 Portfolio 탭에 표시할 작업을 관리자만 등록하고 관리합니다. 고객은 Portfolio를 볼 수만 있습니다.</p>
+        </div>
+        <form class="signup-form portfolio-form admin-portfolio-form" id="adminPortfolioForm">
+          <input type="hidden" name="id" id="adminPortfolioId">
+          <div class="form-grid-two">
+            <label>
+              작품명
+              <input type="text" name="title" placeholder="예: 낮은 결" required>
+            </label>
+            <label>
+              분류
+              <input type="text" name="category" placeholder="예: 식탁, 책상, 의자, 수납장" required>
+            </label>
+          </div>
+          <label>
+            이미지 경로
+            <input type="text" name="image" placeholder="./assets/mokkan-render-dining-table.png">
+          </label>
+          <label>
+            설명
+            <textarea name="description" rows="4" placeholder="구조, 수종, 마감, 디자인 의도를 간결하게 기록해주세요." required></textarea>
+          </label>
+          <div class="form-grid-two">
+            <label>
+              수종/재료
+              <input type="text" name="material" placeholder="예: 월넛, 오크, 애쉬">
+            </label>
+            <label>
+              제작 상태
+              <select name="status">
+                <option>디자인 진행</option>
+                <option>시제품 제작</option>
+                <option>제작 완료</option>
+                <option>판매 가능</option>
+              </select>
+            </label>
+          </div>
+          <div class="admin-actions">
+            <button type="submit" id="adminPortfolioSubmit">포트폴리오 등록</button>
+            <button type="button" class="secondary-button" id="adminPortfolioCancel" hidden>수정 취소</button>
+          </div>
+          <p class="form-note" id="adminPortfolioResult" role="status"></p>
+        </form>
+
+        <div class="table-wrap portfolio-admin-table">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>작품</th>
+                <th>분류</th>
+                <th>설명</th>
+                <th>재료/상태</th>
+                <th>관리</th>
+              </tr>
+            </thead>
+            <tbody id="portfolioAdminRows"></tbody>
+          </table>
+        </div>
+        <p class="empty-state" id="emptyPortfolioAdmin" hidden>관리자가 추가한 포트폴리오가 없습니다.</p>
+      </section>
+    </main>
+    <script src="./admin.js"></script>
+  </body>
+</html>
