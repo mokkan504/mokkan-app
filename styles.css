@@ -127,6 +127,19 @@ a {
   color: var(--brown);
 }
 
+.nav .nav-cta {
+  margin: -7px 0;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--green);
+  color: var(--ivory);
+  font-weight: 700;
+}
+
+.nav .nav-cta:hover {
+  background: var(--brown);
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
