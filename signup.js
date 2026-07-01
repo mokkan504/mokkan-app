@@ -27,7 +27,7 @@
       const { error } = await MokkanBackend.client.auth.signUp({
         email, password: String(d.get("password")),
         options: { emailRedirectTo: location.origin + location.pathname.replace("signup.html", "login.html"), data: {
-          name: String(d.get("name")).trim(), birth_date: d.get("birthDate"), phone: String(d.get("phone")).trim(),
+          name: String(d.get("name")).trim(), birth_date: d.get("birthDate"), phone: String(d.get("phone")).replace(/\D/g, ""),
           address: String(d.get("address")).trim(), interest: d.get("interest"), contact_method: d.get("contactMethod"),
           marketing_consent: d.get("marketingConsent") === "on"
         }}

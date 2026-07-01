@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v15-birth-year-input";
+const CACHE_NAME = "mokkan-v16-phone-input";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -10,6 +10,7 @@ const APP_SHELL = [
   "./backend.js",
   "./analytics.js",
   "./birthdate.js",
+  "./phone-input.js",
   "./manifest.webmanifest",
   "./favicon.ico",
   "./assets/mokkan-logo.png",
