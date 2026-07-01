@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v11-analytics";
+const CACHE_NAME = "mokkan-v12-admin-columns";
 const APP_SHELL = [
   "./",
   "./index.html",
