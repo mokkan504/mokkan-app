@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v6-auth-session";
+const CACHE_NAME = "mokkan-v7-member-nav";
 const APP_SHELL = [
   "./",
   "./index.html",
