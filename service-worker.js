@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v13-csv-export";
+const CACHE_NAME = "mokkan-v14-birthdate-selects";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -9,6 +9,7 @@ const APP_SHELL = [
   "./supabase-config.js",
   "./backend.js",
   "./analytics.js",
+  "./birthdate.js",
   "./manifest.webmanifest",
   "./favicon.ico",
   "./assets/mokkan-logo.png",

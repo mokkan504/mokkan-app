@@ -2,7 +2,8 @@
   const gate=document.getElementById("mypageGate"),content=document.getElementById("mypageContent"),history=document.getElementById("mypageHistory"),form=document.getElementById("mypageForm"),result=document.getElementById("mypageResult");
   const user=await MokkanBackend.user().catch(()=>null);if(!user){gate.hidden=false;return;}
   const profile=await MokkanBackend.profile();content.hidden=false;history.hidden=false;
-  for(const [field,key] of [["name","name"],["birthDate","birth_date"],["email","email"],["phone","phone"],["address","address"],["interest","interest"],["contactMethod","contact_method"]])if(form.elements[field])form.elements[field].value=profile[key]||"";
+  for(const [field,key] of [["name","name"],["email","email"],["phone","phone"],["address","address"],["interest","interest"],["contactMethod","contact_method"]])if(form.elements[field])form.elements[field].value=profile[key]||"";
+  MokkanBirthdate.set(form,profile.birth_date);
   form.elements.marketingConsent.checked=profile.marketing_consent;
   document.getElementById("memberSummary").innerHTML=`<p><strong>${escapeHtml(profile.name)}</strong></p><p>${escapeHtml(profile.email)}</p><p>${escapeHtml(profile.phone||"-")}</p>`;
   const{data:items,error}=await MokkanBackend.client.from("inquiries").select("id,created_at,product,status,message").order("created_at",{ascending:false});

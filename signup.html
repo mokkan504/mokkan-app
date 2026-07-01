@@ -41,9 +41,14 @@
               이름
               <input type="text" name="name" placeholder="홍길동" required>
             </label>
-            <label>
+            <label data-birthdate>
               생년월일
-              <input type="date" name="birthDate" required>
+              <input type="hidden" name="birthDate">
+              <span class="birthdate-selects">
+                <select data-birth-year aria-label="출생 연도" required></select>
+                <select data-birth-month aria-label="출생 월" required></select>
+                <select data-birth-day aria-label="출생 일" required></select>
+              </span>
             </label>
           </div>
 
@@ -128,6 +133,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.102.0/dist/umd/supabase.min.js"></script>
     <script src="./supabase-config.js"></script><script src="./backend.js"></script>
+    <script src="./birthdate.js"></script>
     <script src="./signup.js"></script>
     <script src="./cart.js"></script>
     <script src="./auth.js"></script>
