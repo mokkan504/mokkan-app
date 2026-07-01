@@ -1,4 +1,25 @@
 (async function () {
+  const loginLinks = document.querySelectorAll('a[href="./login.html"]');
+  const signupLinks = document.querySelectorAll('a[href="./signup.html"]');
+
+  function hasStoredSession() {
+    try {
+      const stored = JSON.parse(localStorage.getItem("sb-qmdopiammghynxpvrdol-auth-token") || "null");
+      return Boolean(stored?.access_token);
+    } catch (error) {
+      return false;
+    }
+  }
+
+  function renderMemberNavigation(signedIn) {
+    loginLinks.forEach((link) => { link.textContent = signedIn ? "로그아웃" : "로그인"; });
+    signupLinks.forEach((link) => { link.hidden = signedIn; });
+  }
+
+  // Apply the locally persisted state before loading remote authentication code.
+  // This prevents the navigation from reflowing after the first paint.
+  renderMemberNavigation(hasStoredSession());
+
   function loadScript(src) {
     return new Promise((resolve, reject) => {
       const existing = document.querySelector(`script[src="${src}"]`);
@@ -26,8 +47,7 @@
   }
 
   const current = await MokkanBackend.user().catch(() => null);
-  document.querySelectorAll('a[href="./login.html"]').forEach((link) => { if (current) link.textContent = "로그아웃"; });
-  document.querySelectorAll('a[href="./signup.html"]').forEach((link) => { link.hidden = Boolean(current); });
+  renderMemberNavigation(Boolean(current));
   document.addEventListener("click", async (event) => {
     const link = event.target.closest('a[href="./login.html"]');
     if (!link || !current) return; event.preventDefault(); await MokkanBackend.client.auth.signOut(); location.href = "./index.html";
