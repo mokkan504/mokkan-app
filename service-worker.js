@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v10-password-confirm";
+const CACHE_NAME = "mokkan-v11-analytics";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -8,6 +8,7 @@ const APP_SHELL = [
   "./pwa.js",
   "./supabase-config.js",
   "./backend.js",
+  "./analytics.js",
   "./manifest.webmanifest",
   "./favicon.ico",
   "./assets/mokkan-logo.png",
