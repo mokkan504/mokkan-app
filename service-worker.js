@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v2-security";
+const CACHE_NAME = "mokkan-v3-backend";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -6,6 +6,8 @@ const APP_SHELL = [
   "./cart.js",
   "./auth.js",
   "./pwa.js",
+  "./supabase-config.js",
+  "./backend.js",
   "./manifest.webmanifest",
   "./assets/mokkan-logo.png",
   "./assets/mokkan-render-dining-table.png"
