@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v16-phone-input";
+const CACHE_NAME = "mokkan-v17-admin-login";
 const APP_SHELL = [
   "./",
   "./index.html",

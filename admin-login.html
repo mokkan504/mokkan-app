@@ -31,7 +31,9 @@
         <form class="signup-form" id="adminLoginForm">
           <label>관리자 이메일<input type="email" name="email" autocomplete="username" required></label>
           <label>비밀번호<input type="password" name="password" autocomplete="current-password" required></label>
-          <button type="submit">관리자 로그인</button><p class="form-note" id="adminLoginResult" role="status"></p>
+          <button type="submit">관리자 로그인</button>
+          <button type="button" class="text-button" id="adminResetPassword">비밀번호 재설정 메일 받기</button>
+          <p class="form-note" id="adminLoginResult" role="status" aria-live="polite"></p>
         </form>
 
         <aside class="signup-aside">
