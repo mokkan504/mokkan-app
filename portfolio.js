@@ -75,6 +75,15 @@
       description: "묵직한 팔걸이 의자와 낮은 스툴이 한 세트로 놓이는 작품입니다. 짙은 목재와 밝은 포인트가 대비를 이루며 구조적인 인상을 선명하게 보여줍니다.",
       material: "원목",
       status: "포트폴리오"
+    },
+    {
+      id: "portfolio-dark-wood-chair-set",
+      title: "고요한 결의 의자 세트",
+      category: "의자",
+      image: "./assets/portfolio-dark-wood-chair-set-render.png",
+      description: "짙은 목재의 암체어와 사이드 테이블, 낮은 스툴이 하나의 균형을 이루는 세트입니다. 절제된 구조와 깊은 나뭇결이 차분한 실내에 단정한 존재감을 더합니다.",
+      material: "원목 · 오일 마감",
+      status: "포트폴리오"
     }
   ];
 
