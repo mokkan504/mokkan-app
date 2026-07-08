@@ -85,6 +85,15 @@
       material: "원목 · 오일 마감",
       status: "포트폴리오"
     }
+    ,{
+      id: "portfolio-dark-wood-armchair-table",
+      title: "고요한 결의 암체어와 사이드 테이블",
+      category: "의자",
+      image: "./assets/portfolio-dark-wood-armchair-table-render.png",
+      description: "곧게 뻗은 프레임과 열린 등받이가 돋보이는 암체어에 낮은 사이드 테이블을 조합한 작품입니다. 짙은 목재의 선명한 결이 절제된 구조에 깊이와 온기를 더합니다.",
+      material: "원목 · 오일 마감",
+      status: "포트폴리오"
+    }
   ];
 
   const hiddenLegacyIds = new Set(["portfolio-wooden-lounge-chair", "portfolio-wooden-armchair", "portfolio-wooden-armchair-wide"]);
