@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v17-admin-login";
+const CACHE_NAME = "mokkan-v18-premium-redesign";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -14,7 +14,14 @@ const APP_SHELL = [
   "./manifest.webmanifest",
   "./favicon.ico",
   "./assets/mokkan-logo.png",
-  "./assets/mokkan-render-dining-table.png"
+  "./assets/mokkan-render-dining-table.png",
+  "./assets/mokkan-render-desk.png",
+  "./assets/mokkan-render-side-table.png",
+  "./assets/mokkan-making-lounge-chair.png",
+  "./assets/portfolio-wooden-lounge-chair-render.png",
+  "./assets/portfolio-curved-cabinet-render.png",
+  "./assets/portfolio-shelf-table-render.png",
+  "./assets/mokkan-about-workshop.png"
 ];
 
 self.addEventListener("install", (event) => {
