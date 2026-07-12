@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v21-sharp-home-images";
+const CACHE_NAME = "mokkan-v22-smooth-home-images";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -26,18 +26,18 @@ const APP_SHELL = [
   "./assets/daily-trends-2026-07-12.png",
   "./assets/journal-dining-table-guide.png",
   "./assets/journal-mortise-tenon.png",
-  "./assets/sharp/mokkan-render-dining-table-sharp.jpg",
-  "./assets/sharp/mokkan-render-desk-sharp.jpg",
-  "./assets/sharp/mokkan-render-side-table-sharp.jpg",
-  "./assets/sharp/mokkan-making-lounge-chair-sharp.jpg",
-  "./assets/sharp/portfolio-wooden-lounge-chair-render-sharp.jpg",
-  "./assets/sharp/portfolio-curved-cabinet-render-sharp.jpg",
-  "./assets/sharp/portfolio-shelf-table-render-sharp.jpg",
-  "./assets/sharp/portfolio-dark-wood-armchair-table-render-sharp.jpg",
-  "./assets/sharp/daily-trends-2026-07-12-sharp.jpg",
-  "./assets/sharp/journal-dining-table-guide-sharp.jpg",
-  "./assets/sharp/journal-mortise-tenon-sharp.jpg",
-  "./assets/sharp/mokkan-maker-kang-junyoung-sharp.jpg"
+  "./assets/smooth/mokkan-render-dining-table-smooth.jpg",
+  "./assets/smooth/mokkan-render-desk-smooth.jpg",
+  "./assets/smooth/mokkan-render-side-table-smooth.jpg",
+  "./assets/smooth/mokkan-making-lounge-chair-smooth.jpg",
+  "./assets/smooth/portfolio-wooden-lounge-chair-render-smooth.jpg",
+  "./assets/smooth/portfolio-curved-cabinet-render-smooth.jpg",
+  "./assets/smooth/portfolio-shelf-table-render-smooth.jpg",
+  "./assets/smooth/portfolio-dark-wood-armchair-table-render-smooth.jpg",
+  "./assets/smooth/daily-trends-2026-07-12-smooth.jpg",
+  "./assets/smooth/journal-dining-table-guide-smooth.jpg",
+  "./assets/smooth/journal-mortise-tenon-smooth.jpg",
+  "./assets/smooth/mokkan-maker-kang-junyoung-smooth.jpg"
 ];
 
 self.addEventListener("install", (event) => {
