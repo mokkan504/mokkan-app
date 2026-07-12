@@ -12,7 +12,7 @@
   }
 
   function renderMemberNavigation(signedIn) {
-    loginLinks.forEach((link) => { link.textContent = signedIn ? "로그아웃" : "로그인"; });
+    loginLinks.forEach((link) => { link.textContent = signedIn ? "Log Out" : "Login"; });
     signupLinks.forEach((link) => { link.hidden = signedIn; });
   }
 

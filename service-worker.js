@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v23-utf8-text-fix";
+const CACHE_NAME = "mokkan-v24-unified-english-nav";
 const APP_SHELL = [
   "./",
   "./index.html",
