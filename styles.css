@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap");
+
 :root {
   --green: #103b28;
   --green-deep: #082419;
@@ -9,8 +11,9 @@
   --line: rgba(75, 47, 29, 0.18);
   --text: #1d1914;
   --muted: #6d6257;
-  --font-body: "Malgun Gothic", "맑은 고딕", "Apple SD Gothic Neo", "Segoe UI", Arial, sans-serif;
-  --font-display: "Malgun Gothic", "맑은 고딕", "Apple SD Gothic Neo", "Segoe UI", Arial, sans-serif;
+  --font-body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", Arial, sans-serif;
+  --font-display: "Noto Serif KR", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", serif;
+  --font-latin: "Montserrat", "Noto Sans KR", "Segoe UI", Arial, sans-serif;
 }
 
 * {
@@ -2850,5 +2853,373 @@ input[readonly] {
   .premium-section-head h2,
   .premium-contact-cta h2 {
     font-size: clamp(32px, 10vw, 46px);
+  }
+}
+
+/* Designer-grade detailing */
+body {
+  background:
+    linear-gradient(90deg, rgba(23, 19, 15, 0.018) 1px, transparent 1px),
+    var(--paper);
+  background-size: clamp(72px, 9vw, 132px) 100%;
+  letter-spacing: -0.012em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-feature-settings: "kern";
+}
+
+.eyebrow,
+.brand-word,
+.nav,
+.button,
+.small-action,
+.nav-button,
+.cart-count,
+.operator-link,
+.hero-signature dt,
+.premium-product-card span,
+.premium-product-card small,
+.portfolio-preview-grid span,
+.showroom-link-strip a {
+  font-family: var(--font-latin);
+}
+
+.site-header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom-color: rgba(23, 19, 15, 0.1);
+}
+
+.brand img {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(23, 19, 15, 0.1);
+}
+
+.brand-hanja {
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+}
+
+.nav {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav .nav-cta {
+  padding: 8px 14px;
+  border-radius: 0;
+}
+
+.premium-hero {
+  grid-template-columns: minmax(0, 0.86fr) minmax(420px, 1.14fr);
+  border-bottom: 1px solid rgba(247, 241, 230, 0.12);
+}
+
+.premium-hero h1 {
+  font-family: var(--font-display);
+  text-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+}
+
+.premium-hero .hero-media {
+  overflow: visible;
+}
+
+.premium-hero .hero-media::before {
+  position: absolute;
+  inset: clamp(42px, 6vw, 84px) clamp(34px, 5vw, 74px) clamp(42px, 6vw, 84px) -24px;
+  border: 1px solid rgba(247, 241, 230, 0.18);
+  content: "";
+}
+
+.premium-hero .hero-media img {
+  filter: saturate(0.94) contrast(1.02);
+}
+
+.hero-signature {
+  backdrop-filter: blur(10px);
+}
+
+.button,
+.small-action,
+button {
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.button:hover,
+.small-action:hover,
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(23, 19, 15, 0.1);
+}
+
+.showroom-link-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(23, 19, 15, 0.12);
+  border-bottom: 1px solid rgba(23, 19, 15, 0.12);
+  background: #fffaf1;
+}
+
+.showroom-link-strip a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 78px;
+  padding: 0 clamp(18px, 3vw, 40px);
+  border-right: 1px solid rgba(23, 19, 15, 0.12);
+  color: var(--premium-ink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.showroom-link-strip a:last-child {
+  border-right: 0;
+}
+
+.showroom-link-strip a:hover {
+  background: var(--premium-ink);
+  color: var(--premium-cream);
+}
+
+.showroom-link-strip span {
+  color: var(--premium-gold);
+  letter-spacing: 0.1em;
+}
+
+.section {
+  padding-top: clamp(68px, 9vw, 132px);
+  padding-bottom: clamp(68px, 9vw, 132px);
+}
+
+.premium-section-head {
+  position: relative;
+}
+
+.premium-section-head::after {
+  display: block;
+  width: clamp(72px, 10vw, 132px);
+  height: 1px;
+  margin-top: 24px;
+  background: rgba(23, 19, 15, 0.22);
+  content: "";
+}
+
+.premium-intro-grid {
+  background: rgba(255, 250, 241, 0.72);
+}
+
+.premium-intro-grid article {
+  transition: background 180ms ease;
+}
+
+.premium-intro-grid article:hover {
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.premium-product-card {
+  isolation: isolate;
+}
+
+.premium-product-card::after,
+.portfolio-preview-grid a::after {
+  position: absolute;
+  inset: 18px;
+  z-index: 1;
+  border: 1px solid rgba(247, 241, 230, 0.22);
+  pointer-events: none;
+  content: "";
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.premium-product-card:hover::after,
+.portfolio-preview-grid a:hover::after {
+  opacity: 1;
+}
+
+.premium-product-card div {
+  z-index: 2;
+}
+
+.premium-product-card small {
+  display: block;
+  margin: -2px 0 14px;
+  color: rgba(247, 241, 230, 0.68);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.premium-making {
+  position: relative;
+}
+
+.premium-making::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: clamp(20px, 5vw, 72px);
+  width: 1px;
+  background: rgba(23, 19, 15, 0.12);
+  content: "";
+}
+
+.premium-making .making-copy {
+  padding-left: clamp(18px, 3vw, 42px);
+}
+
+.portfolio-preview-grid a,
+.premium-journal-preview .light-card,
+.product-card,
+.journal-card,
+.contact-form,
+.custom-order-visual,
+.finder-card,
+.admin-card {
+  border-radius: 0;
+}
+
+.premium-journal-preview .light-card {
+  border-color: rgba(23, 19, 15, 0.14);
+  box-shadow: 0 20px 48px rgba(23, 19, 15, 0.045);
+}
+
+.journal-grid span,
+.premium-journal-preview .light-card span {
+  font-family: var(--font-latin);
+  letter-spacing: 0.16em;
+}
+
+.premium-maker-profile {
+  border-top: 1px solid rgba(23, 19, 15, 0.1);
+  border-bottom: 1px solid rgba(23, 19, 15, 0.1);
+}
+
+.premium-maker-profile .maker-profile-copy {
+  padding: clamp(8px, 2vw, 24px) 0;
+}
+
+.premium-contact-cta {
+  min-height: 520px;
+  background-position: center 58%;
+}
+
+.premium-contact-cta .button.ghost:hover {
+  background: rgba(247, 241, 230, 0.12);
+}
+
+input,
+select,
+textarea {
+  border-radius: 0;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: rgba(23, 19, 15, 0.55);
+  box-shadow: 0 0 0 3px rgba(184, 148, 93, 0.16);
+  outline: 0;
+}
+
+.site-footer {
+  min-height: 148px;
+  border-top: 1px solid rgba(247, 241, 230, 0.12);
+  background:
+    linear-gradient(90deg, rgba(247, 241, 230, 0.04) 1px, transparent 1px),
+    var(--green-deep);
+  background-size: clamp(72px, 9vw, 132px) 100%;
+}
+
+@media (max-width: 980px) {
+  .premium-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .premium-hero .hero-media::before {
+    inset: 36px;
+  }
+
+  .showroom-link-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .showroom-link-strip a:nth-child(2) {
+    border-right: 0;
+  }
+
+  .showroom-link-strip a:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(23, 19, 15, 0.12);
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    background-size: 72px 100%;
+  }
+
+  .site-header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .brand img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav {
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav a {
+    flex: 0 0 auto;
+  }
+
+  .premium-hero .hero-media::before {
+    inset: 28px;
+  }
+
+  .showroom-link-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .showroom-link-strip a,
+  .showroom-link-strip a:nth-child(2) {
+    min-height: 62px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(23, 19, 15, 0.12);
+  }
+
+  .showroom-link-strip a:last-child {
+    border-bottom: 0;
+  }
+
+  .premium-making::before {
+    display: none;
+  }
+
+  .premium-making .making-copy {
+    padding-left: 0;
   }
 }
