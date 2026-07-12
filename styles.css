@@ -3264,6 +3264,8 @@ textarea:focus {
   min-height: 620px;
   object-fit: cover;
   object-position: center;
+  image-rendering: auto;
+  backface-visibility: hidden;
 }
 
 .rb-hero::after {
@@ -3292,7 +3294,7 @@ textarea:focus {
   margin: 8px 0 6px;
   font-size: clamp(48px, 8vw, 104px);
   line-height: 0.98;
-  text-shadow: 0 20px 60px rgba(0, 0, 0, 0.24);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.22);
 }
 
 .rb-hero-panel p:not(.eyebrow) {
@@ -3388,8 +3390,10 @@ textarea:focus {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  image-rendering: auto;
   opacity: 0.92;
   transition: opacity 240ms ease, transform 600ms ease;
+  backface-visibility: hidden;
 }
 
 .rb-feature-card:hover img {
@@ -3479,6 +3483,8 @@ textarea:focus {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  image-rendering: auto;
+  backface-visibility: hidden;
 }
 
 .rb-catalog-banner h2,
@@ -3540,6 +3546,8 @@ textarea:focus {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   background: #eee;
+  image-rendering: auto;
+  backface-visibility: hidden;
 }
 
 .rb-product-carousel strong,
@@ -3593,6 +3601,8 @@ textarea:focus {
   aspect-ratio: 16 / 10;
   object-fit: cover;
   margin-bottom: 18px;
+  image-rendering: auto;
+  backface-visibility: hidden;
 }
 
 .rb-mag-grid h3 {

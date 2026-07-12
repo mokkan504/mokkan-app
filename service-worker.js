@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v20-roche-inspired-home";
+const CACHE_NAME = "mokkan-v21-sharp-home-images";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -25,7 +25,19 @@ const APP_SHELL = [
   "./assets/mokkan-about-workshop.png",
   "./assets/daily-trends-2026-07-12.png",
   "./assets/journal-dining-table-guide.png",
-  "./assets/journal-mortise-tenon.png"
+  "./assets/journal-mortise-tenon.png",
+  "./assets/sharp/mokkan-render-dining-table-sharp.jpg",
+  "./assets/sharp/mokkan-render-desk-sharp.jpg",
+  "./assets/sharp/mokkan-render-side-table-sharp.jpg",
+  "./assets/sharp/mokkan-making-lounge-chair-sharp.jpg",
+  "./assets/sharp/portfolio-wooden-lounge-chair-render-sharp.jpg",
+  "./assets/sharp/portfolio-curved-cabinet-render-sharp.jpg",
+  "./assets/sharp/portfolio-shelf-table-render-sharp.jpg",
+  "./assets/sharp/portfolio-dark-wood-armchair-table-render-sharp.jpg",
+  "./assets/sharp/daily-trends-2026-07-12-sharp.jpg",
+  "./assets/sharp/journal-dining-table-guide-sharp.jpg",
+  "./assets/sharp/journal-mortise-tenon-sharp.jpg",
+  "./assets/sharp/mokkan-maker-kang-junyoung-sharp.jpg"
 ];
 
 self.addEventListener("install", (event) => {
