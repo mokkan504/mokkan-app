@@ -3223,3 +3223,468 @@ textarea:focus {
     padding-left: 0;
   }
 }
+
+/* Roche-Bobois-inspired showroom homepage */
+.rb-home {
+  background: #fff;
+  color: #171717;
+}
+
+.rb-home .eyebrow {
+  color: #111;
+  font-family: var(--font-latin);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.rb-home h1,
+.rb-home h2,
+.rb-home h3 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+.rb-hero {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  overflow: hidden;
+  background: #ece6db;
+}
+
+.rb-hero img {
+  width: 100%;
+  height: calc(100vh - 70px);
+  min-height: 620px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.rb-hero::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.38));
+  content: "";
+}
+
+.rb-hero-panel {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: clamp(44px, 9vh, 92px);
+  width: min(780px, calc(100% - 40px));
+  color: #fff;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.rb-hero-panel .eyebrow {
+  color: #fff;
+}
+
+.rb-hero-panel h1 {
+  margin: 8px 0 6px;
+  font-size: clamp(48px, 8vw, 104px);
+  line-height: 0.98;
+  text-shadow: 0 20px 60px rgba(0, 0, 0, 0.24);
+}
+
+.rb-hero-panel p:not(.eyebrow) {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: var(--font-latin);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rb-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  margin-top: 24px;
+  padding: 0 28px;
+  border: 1px solid currentColor;
+  color: inherit;
+  font-family: var(--font-latin);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.rb-link:hover {
+  background: currentColor;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.rb-link.dark {
+  color: #171717;
+}
+
+.rb-link.dark:hover {
+  background: #171717;
+  color: #fff;
+}
+
+.rb-category-nav {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+}
+
+.rb-category-nav a {
+  display: grid;
+  min-height: 72px;
+  place-items: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  font-family: var(--font-latin);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.rb-category-nav a:last-child {
+  border-right: 0;
+}
+
+.rb-category-nav a:hover {
+  background: #171717;
+  color: #fff;
+}
+
+.rb-feature-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 1px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.rb-feature-card {
+  position: relative;
+  min-height: 56vw;
+  max-height: 760px;
+  overflow: hidden;
+  background: #171717;
+  color: #fff;
+}
+
+.rb-feature-card:not(.rb-feature-card-wide) {
+  min-height: 56vw;
+}
+
+.rb-feature-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.92;
+  transition: opacity 240ms ease, transform 600ms ease;
+}
+
+.rb-feature-card:hover img {
+  opacity: 0.72;
+  transform: scale(1.04);
+}
+
+.rb-feature-card div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: clamp(24px, 4vw, 54px);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
+}
+
+.rb-feature-card h2 {
+  margin: 0;
+  font-size: clamp(34px, 5vw, 72px);
+  line-height: 1;
+}
+
+.rb-feature-card p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: var(--font-latin);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.rb-feature-card span {
+  display: inline-block;
+  margin-top: 18px;
+  border-bottom: 1px solid currentColor;
+  font-family: var(--font-latin);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.rb-editorial-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.rb-editorial-strip a {
+  min-height: 190px;
+  padding: clamp(24px, 4vw, 46px);
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+}
+
+.rb-editorial-strip a:last-child {
+  border-right: 0;
+}
+
+.rb-editorial-strip strong {
+  display: block;
+  font-family: var(--font-latin);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.rb-editorial-strip span {
+  display: block;
+  max-width: 360px;
+  margin-top: 20px;
+  color: #666;
+}
+
+.rb-catalog-banner,
+.rb-brand-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 76px);
+  padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 72px);
+  background: #f6f3ed;
+}
+
+.rb-catalog-banner img,
+.rb-brand-story img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.rb-catalog-banner h2,
+.rb-brand-story h2,
+.rb-section-title h2,
+.rb-consulting h2 {
+  margin: 0;
+  font-size: clamp(34px, 5vw, 68px);
+  line-height: 1.05;
+}
+
+.rb-catalog-banner p:not(.eyebrow),
+.rb-brand-story p:not(.eyebrow),
+.rb-consulting p {
+  max-width: 640px;
+  color: #666;
+  font-size: 17px;
+}
+
+.rb-section {
+  padding: clamp(62px, 8vw, 116px) clamp(20px, 5vw, 72px);
+  background: #fff;
+}
+
+.rb-section-title {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: clamp(28px, 4vw, 54px);
+}
+
+.rb-section-title a {
+  border-bottom: 1px solid currentColor;
+  font-family: var(--font-latin);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.rb-product-carousel {
+  display: grid;
+  grid-auto-columns: minmax(260px, 31vw);
+  grid-auto-flow: column;
+  gap: 18px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding-bottom: 14px;
+  scroll-snap-type: x mandatory;
+}
+
+.rb-product-carousel a {
+  scroll-snap-align: start;
+}
+
+.rb-product-carousel img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: #eee;
+}
+
+.rb-product-carousel strong,
+.rb-product-carousel span {
+  display: block;
+}
+
+.rb-product-carousel strong {
+  margin-top: 14px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.rb-product-carousel span,
+.rb-mag-grid span {
+  color: #777;
+  font-family: var(--font-latin);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.rb-consulting {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  padding: clamp(62px, 8vw, 116px) clamp(20px, 5vw, 72px);
+  background: #1b1b1b;
+  color: #fff;
+}
+
+.rb-consulting .eyebrow,
+.rb-consulting p {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.rb-mag-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr;
+  gap: 20px;
+}
+
+.rb-mag-grid a {
+  display: block;
+}
+
+.rb-mag-grid img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+.rb-mag-grid h3 {
+  margin: 8px 0 0;
+  font-size: clamp(22px, 2.7vw, 34px);
+  line-height: 1.18;
+}
+
+.rb-brand-story {
+  grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.rb-brand-story figure {
+  margin: 0;
+}
+
+.rb-brand-story img {
+  aspect-ratio: 4 / 5;
+}
+
+@media (max-width: 980px) {
+  .rb-hero,
+  .rb-hero img {
+    min-height: 620px;
+  }
+
+  .rb-category-nav,
+  .rb-feature-grid,
+  .rb-editorial-strip,
+  .rb-catalog-banner,
+  .rb-mag-grid,
+  .rb-brand-story {
+    grid-template-columns: 1fr;
+  }
+
+  .rb-feature-card,
+  .rb-feature-card:not(.rb-feature-card-wide) {
+    min-height: 520px;
+  }
+
+  .rb-editorial-strip a,
+  .rb-category-nav a {
+    border-right: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .rb-editorial-strip a:last-child,
+  .rb-category-nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .rb-product-carousel {
+    grid-auto-columns: minmax(260px, 72vw);
+  }
+
+  .rb-consulting {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .rb-hero,
+  .rb-hero img {
+    min-height: 560px;
+  }
+
+  .rb-hero-panel {
+    bottom: 36px;
+  }
+
+  .rb-hero-panel h1 {
+    font-size: clamp(44px, 18vw, 72px);
+  }
+
+  .rb-category-nav a {
+    min-height: 58px;
+  }
+
+  .rb-feature-card,
+  .rb-feature-card:not(.rb-feature-card-wide) {
+    min-height: 440px;
+  }
+
+  .rb-section-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .rb-product-carousel {
+    grid-auto-columns: minmax(240px, 84vw);
+  }
+}

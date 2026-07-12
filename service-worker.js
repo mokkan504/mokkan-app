@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v19-premium-detailing";
+const CACHE_NAME = "mokkan-v20-roche-inspired-home";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -21,7 +21,11 @@ const APP_SHELL = [
   "./assets/portfolio-wooden-lounge-chair-render.png",
   "./assets/portfolio-curved-cabinet-render.png",
   "./assets/portfolio-shelf-table-render.png",
-  "./assets/mokkan-about-workshop.png"
+  "./assets/portfolio-dark-wood-armchair-table-render.png",
+  "./assets/mokkan-about-workshop.png",
+  "./assets/daily-trends-2026-07-12.png",
+  "./assets/journal-dining-table-guide.png",
+  "./assets/journal-mortise-tenon.png"
 ];
 
 self.addEventListener("install", (event) => {
