@@ -1,9 +1,8 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <title>가구 이야기 | MOKKAN 목간</title>
     <meta name="description" content="목간의 원목 가구 블로그와 세계 가구 디자인 글입니다.">
     <link rel="stylesheet" href="./styles.css">
@@ -14,17 +13,17 @@
         <img src="./assets/mokkan-logo.png" alt="MOKKAN 목간 로고">
         <span class="brand-word">MOKKAN <span class="brand-hanja">木間</span></span>
       </a>
-      <nav class="nav" aria-label="Main menu">
-        <a href="./products.html">Products</a>
-        <a href="./portfolio.html">Portfolio</a>
-        <a href="./journal.html">Journal</a>
-        <a href="./furniture-finder.html">Guide</a>
-        <a class="nav-cta" href="./custom-quote.html">Consulting</a>
-        <a href="./about.html">Mokkan</a>
-        <a href="./cart.html">Cart <span id="cartCount" class="cart-count">0</span></a>
-        <a href="./mypage.html">My Page</a>
-        <a href="./signup.html">Sign Up</a>
-        <a href="./login.html">Login</a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="./about.html">소개</a>
+        <a href="./products.html">제품</a>
+        <a href="./furniture-finder.html">맞춤 가이드</a>
+        <a href="./journal.html">가구 이야기</a>
+        <a href="./portfolio.html">작업 사례</a>
+        <a href="./contact.html">문의</a>
+        <a href="./signup.html">회원가입</a>
+        <a href="./login.html">로그인</a>
+        <a href="./mypage.html">마이페이지</a>
+        <a href="./cart.html">장바구니 <span id="cartCount" class="cart-count">0</span></a>
       </nav>
     </header>
 
@@ -40,8 +39,16 @@
           <button type="button" role="tab" aria-selected="false" aria-controls="journalPosts" data-journal-filter="wood-knowledge" tabindex="-1">목공 지식</button>
           <button type="button" role="tab" aria-selected="false" aria-controls="journalPosts" data-journal-filter="daily-trends" tabindex="-1">일일 트렌드</button>
         </div>
-        <p class="journal-filter-status" aria-live="polite"><span id="journalVisibleCount">40</span>개의 글</p>
+        <p class="journal-filter-status" aria-live="polite"><span id="journalVisibleCount">41</span>개의 글</p>
         <div class="journal-grid" id="journalPosts" role="tabpanel" aria-label="전체 글">
+          <a class="journal-card has-media" href="./blog/hanok-umul-maru.html" data-category="wood-knowledge">
+            <img src="./assets/journal-hanok-umul-maru.png" alt="한옥 대청의 들어 올린 목재 바닥에 우물마루 격자와 널판이 보이는 모습">
+            <div class="journal-card-body">
+              <span>Hanok Structure</span>
+              <h3>한옥 우물마루가 바닥을 짜는 방식</h3>
+              <p>장귀틀, 동귀틀, 청판이 만드는 격자형 마루 구조와 대청의 생활 감각을 살펴봅니다.</p>
+            </div>
+          </a>
           <a class="journal-card has-media" href="./blog/daily-trends-2026-07-20.html" data-category="daily-trends">
             <img src="./assets/daily-trends-2026-07-20.png" alt="튜블러 스틸 라운지체어, 원목 샘플, 대나무 소재, 직물 스와치, 3D 가구 구성 태블릿과 기획지가 놓인 실사형 목간 트렌드 스튜디오">
             <div class="journal-card-body">
@@ -83,7 +90,7 @@
             </div>
           </a>
           <a class="journal-card has-media" href="./blog/chair-stretcher-structure.html" data-category="wood-knowledge">
-            <img src="./assets/journal-chair-stretcher-structure.png" alt="원목 의자 하부에서 다리 사이의 앞 가로대와 옆 가로대, 중앙 H형 가로대 구조가 보이는 작업대">
+            <img src="./assets/journal-chair-stretcher-structure.png" alt="원목 의자 하부에서 네 다리를 잇는 앞 가로대와 옆 가로대가 보이는 작업대">
             <div class="journal-card-body">
               <span>Furniture Structure</span>
               <h3>의자 가로대가 흔들림을 줄이는 방식</h3>
@@ -370,7 +377,5 @@
     <script src="./cart.js"></script>
     <script src="./auth.js"></script>
     <script src="./journal.js"></script>
-      <script src="./supabase-config.js"></script>
-    <script src="./analytics.js"></script>
-</body>
+  </body>
 </html>
