@@ -5,7 +5,7 @@
   const count = document.getElementById('journalVisibleCount');
   if (!tabs.length || !panel || !count) return;
 
-  const labels = { all: '전체 글', 'wood-knowledge': '목공 지식 글', 'daily-trends': '일일 트렌드 글' };
+  const labels = { all: 'All posts', 'wood-knowledge': 'Wood knowledge posts', 'daily-trends': 'Daily trends posts' };
 
   function activate(tab, moveFocus) {
     const filter = tab.dataset.journalFilter;

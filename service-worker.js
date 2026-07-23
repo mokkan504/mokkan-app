@@ -1,4 +1,4 @@
-const CACHE_NAME = "mokkan-v25-journal-nav-products-copy";
+const CACHE_NAME = "mokkan-v26-english-journal-tabs";
 const APP_SHELL = [
   "./",
   "./index.html",
