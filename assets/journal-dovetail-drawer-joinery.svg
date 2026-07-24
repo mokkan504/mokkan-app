@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">도브테일 결구가 보이는 원목 서랍 모서리</title>
+  <desc id="desc">작업대 위에서 서랍 앞판과 옆판이 사다리꼴 도브테일 결구로 맞물리는 모습을 설명하는 목재 질감 일러스트</desc>
+  <defs>
+    <linearGradient id="bench" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8f643f"/>
+      <stop offset="0.52" stop-color="#b98755"/>
+      <stop offset="1" stop-color="#6d472e"/>
+    </linearGradient>
+    <linearGradient id="frontFace" x1="0" y1="0" x2="1" y2="0.25">
+      <stop offset="0" stop-color="#d7b17a"/>
+      <stop offset="0.6" stop-color="#e5c58f"/>
+      <stop offset="1" stop-color="#c8955f"/>
+    </linearGradient>
+    <linearGradient id="sideFace" x1="0" y1="0" x2="1" y2="0.35">
+      <stop offset="0" stop-color="#c6935c"/>
+      <stop offset="0.55" stop-color="#deb980"/>
+      <stop offset="1" stop-color="#b77d4d"/>
+    </linearGradient>
+    <linearGradient id="endGrain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a56f43"/>
+      <stop offset="1" stop-color="#6f452b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="18" flood-color="#3f2718" flood-opacity="0.26"/>
+    </filter>
+    <pattern id="grainA" width="90" height="24" patternUnits="userSpaceOnUse">
+      <path d="M0 9 C26 3 53 17 90 8" fill="none" stroke="#9f6c41" stroke-opacity="0.22" stroke-width="2"/>
+      <path d="M0 18 C28 13 61 25 90 17" fill="none" stroke="#fff2d3" stroke-opacity="0.18" stroke-width="1.2"/>
+    </pattern>
+    <pattern id="grainB" width="78" height="28" patternUnits="userSpaceOnUse">
+      <path d="M0 11 C22 18 48 2 78 12" fill="none" stroke="#815532" stroke-opacity="0.2" stroke-width="2"/>
+      <path d="M0 22 C21 26 49 12 78 20" fill="none" stroke="#ffe6b8" stroke-opacity="0.16" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="endPattern" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M2 8 C10 1 24 4 32 13" fill="none" stroke="#3f2517" stroke-opacity="0.24" stroke-width="1.3"/>
+      <path d="M5 27 C13 20 25 22 33 30" fill="none" stroke="#f3c78b" stroke-opacity="0.16" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#f1dfbf"/>
+  <path d="M0 604 C240 548 483 574 706 533 C887 500 1030 505 1200 468 L1200 800 L0 800 Z" fill="url(#bench)"/>
+  <g opacity="0.22" fill="none" stroke="#4c2d1a" stroke-width="2">
+    <path d="M85 673 C258 621 415 664 586 618 C728 581 913 601 1095 548"/>
+    <path d="M0 748 C219 710 362 742 565 692 C748 647 928 676 1200 603"/>
+    <path d="M155 590 C336 615 497 572 691 554 C869 537 1009 543 1180 502"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M122 242 L686 151 L690 572 L128 662 Z" fill="url(#frontFace)"/>
+    <path d="M122 242 L686 151 L690 572 L128 662 Z" fill="url(#grainA)" opacity="0.85"/>
+    <path d="M686 151 L1058 260 L1051 662 L690 572 Z" fill="url(#sideFace)"/>
+    <path d="M686 151 L1058 260 L1051 662 L690 572 Z" fill="url(#grainB)" opacity="0.86"/>
+    <path d="M122 242 L686 151 L1058 260 L690 572 L128 662 Z" fill="none" stroke="#6b4329" stroke-opacity="0.42" stroke-width="3"/>
+    <path d="M686 151 L690 572" fill="none" stroke="#5d3922" stroke-width="5"/>
+    <g>
+      <polygon points="650,190 737,206 727,259 661,249" fill="url(#endGrain)"/>
+      <polygon points="649,190 737,206 727,259 661,249" fill="url(#endPattern)" opacity="0.7"/>
+      <polygon points="652,311 732,319 724,373 663,370" fill="url(#endGrain)"/>
+      <polygon points="652,311 732,319 724,373 663,370" fill="url(#endPattern)" opacity="0.7"/>
+      <polygon points="654,431 727,432 721,492 664,496" fill="url(#endGrain)"/>
+      <polygon points="654,431 727,432 721,492 664,496" fill="url(#endPattern)" opacity="0.7"/>
+      <path d="M686 151 L1058 260 L1051 662 L690 572 Z" fill="none" stroke="#55331e" stroke-opacity="0.28" stroke-width="2"/>
+      <path d="M707 202 L773 220 L767 266 L697 254 Z" fill="none" stroke="#4d2e1c" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M700 312 L769 331 L762 380 L698 369 Z" fill="none" stroke="#4d2e1c" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M699 424 L764 443 L756 493 L700 481 Z" fill="none" stroke="#4d2e1c" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M682 160 L650 190 L661 249 L691 277 L720 259 L730 209 Z" fill="#d8af78" opacity="0.88"/>
+      <path d="M683 281 L652 311 L663 370 L692 399 L718 376 L729 323 Z" fill="#d8af78" opacity="0.88"/>
+      <path d="M685 403 L654 431 L664 496 L692 522 L715 497 L724 437 Z" fill="#d8af78" opacity="0.88"/>
+      <path d="M681 160 L650 190 L661 249 L691 277 M683 281 L652 311 L663 370 L692 399 M685 403 L654 431 L664 496 L692 522" fill="none" stroke="#704528" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+    <path d="M686 151 L1058 260" fill="none" stroke="#f4d7a2" stroke-opacity="0.55" stroke-width="5"/>
+    <path d="M122 242 L686 151" fill="none" stroke="#fae0aa" stroke-opacity="0.55" stroke-width="5"/>
+  </g>
+  <g opacity="0.25" fill="none" stroke="#f5d7a6" stroke-width="4">
+    <path d="M209 320 C338 292 471 258 622 231"/>
+    <path d="M216 416 C371 380 514 367 635 332"/>
+    <path d="M210 545 C358 519 481 486 640 462"/>
+  </g>
+</svg>
